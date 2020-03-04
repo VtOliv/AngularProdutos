@@ -1,0 +1,9 @@
+<!-- <div class="col-8">
+    <ol>
+        <li *ngFor="let p of produtos">{{p.desc}}</li>
+    </ol>
+</div> -->
+
+<app-produto *ngFor="let p of produtos" [produto]="p"></app-produto>
+<!-- <app-produto *ngFor="let p of produtos" [produto]="produto" (grupoClicado)="reciverFeedback($event)"></app-produto> -->
+
