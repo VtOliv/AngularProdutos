@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MyFilterPipe } from './filter.pipe';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +23,8 @@ import { ProdutoComponent } from './components/produto/produto.component';
     ContatoComponent,
     ListaDeProdutosComponent,
     GruposComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    MyFilterPipe
   ],
   imports: [
     BrowserModule,

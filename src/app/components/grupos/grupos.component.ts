@@ -13,13 +13,6 @@ export class GruposComponent implements OnInit {
   public grupos: Grupo[] = [];
   @Output() grupoClicado = new EventEmitter();
   constructor(private http:HttpService) {
-    this.grupos.push(
-
-      new Grupo(1,"camiseta"),
-      new Grupo(2,'tenis'),
-      new Grupo(3,'boné')
-      )
-
 
 
     this.http.getGrupo().subscribe(

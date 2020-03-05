@@ -10,18 +10,35 @@ import { Grupo } from 'src/app/models/Grupo';
 })
 export class ListaDeProdutosComponent implements OnInit {
 
-  @Input() grupoAtivo: number | Grupo;
+  @Input() grupoAtivo: number = 10;
+
+  produtosFiltro = this.grupoAtivo;
+  
+  ativo = {
+    codGrupo : this.grupoAtivo
+  }
 
   public produtos: Produto[] = []
+  public exibirCategoria: Produto[] = []
   constructor(private http:HttpService) {
     this.http.getProduto().subscribe(
       (data) => { 
         this.produtos = data
+        this.exibirCategoria = data
       }
     )
   
   
   }
+
+  ativarGrupo(codGrupo:number) {
+    if (codGrupo == 0) {
+      this.exibirCategoria = this.produtos
+    } else {
+      this.exibirCategoria = this.produtos.filter(x => x._codGrupo == codGrupo)
+    }
+  }
+  
 
 
   ngOnInit(): void {

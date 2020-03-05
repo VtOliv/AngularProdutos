@@ -3,7 +3,17 @@
         <li *ngFor="let p of produtos">{{p.desc}}</li>
     </ol>
 </div> -->
-
-<app-produto *ngFor="let p of produtos" [produto]="p"></app-produto>
+<!-- <li *ngFor="let p of produtos" [produto]="p" | produtosFiltro : grupoAtivo>
+<app-produto [produto] ="p" ></app-produto></li> -->
 <!-- <app-produto *ngFor="let p of produtos" [produto]="produto" (grupoClicado)="reciverFeedback($event)"></app-produto> -->
+
+
+  
+<div class="border">
+    <ul>
+        <li *ngFor="let item of produtos | produtosFiltro:grupoAtivo">
+            <app-produto [produto]="item"></app-produto>
+        </li>
+    </ul>
+</div>
 

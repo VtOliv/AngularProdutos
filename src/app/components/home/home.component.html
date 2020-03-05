@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
         <app-grupos (grupoClicado)="listarGrupo($event)"></app-grupos>
-        <app-lista-de-produtos></app-lista-de-produtos>
+        <app-lista-de-produtos [grupoAtivo]="grupo"></app-lista-de-produtos>
     </div>
 </div>
