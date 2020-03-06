@@ -1,0 +1,10 @@
+.active {
+    background-color: rgb(255, 253, 253);
+    color: black;
+}
+
+li {
+    padding: 3px;
+    border: white 1px solid;
+    width: 33%;
+}

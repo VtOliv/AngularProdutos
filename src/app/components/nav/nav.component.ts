@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+
+interface iItem {
+  label:string;
+  route: string;
+  ativo:boolean;
+  
+}
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +15,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  itens:iItem[]= [
+    {
+    ativo: true,
+    label: "home",
+    route: "/"},
+{
+    ativo: false,
+    label: "sobre",
+    route: "/sobre",
+},{
+    ativo: false,
+    label: "contato",
+    route: "/contato"
+    }]
+  @Output() ativarItem = new EventEmitter();
+  constructor() {}
+
+    destacar(item: iItem) {
+      this.itens.forEach(item => { item.ativo = false})
+    item.ativo = true;}
 
   ngOnInit(): void {
   }

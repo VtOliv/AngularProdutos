@@ -10,6 +10,8 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class GruposComponent implements OnInit {
 
+  private grupoTotal = new Grupo (0,"Todos");
+
   public grupos: Grupo[] = [];
   @Output() grupoClicado = new EventEmitter();
   constructor(private http:HttpService) {
@@ -17,10 +19,11 @@ export class GruposComponent implements OnInit {
 
     this.http.getGrupo().subscribe(
       (data) => { 
-        this.grupos = data
+        this.grupos = [this.grupoTotal,...data];
       }
     )
   }
+
 
 
   ngOnInit(): void {

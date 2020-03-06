@@ -1,8 +1,11 @@
-<div >
-    <p class="text-muted">{{produto._codProd}}</p>
-    <h5>{{produto._desc}}</h5>
-    <div class="d-flex"><h6>{{produto._regAnvisa}}</h6>
-    <h6 class="ml-2">{{produto._controlado}}</h6>
-    <h6 class="ml-2">{{produto._codGrupo}}</h6></div>
-    <hr>
+<div class="d-inline">
+    <div class="card" style="width: 12rem;">
+        <div class="card-body">
+            <h5 class="bg-dark text-light">{{produto._desc}}</h5>
+            <p class="card-text">{{produto._codProd}} | {{produto._regAnvisa}} <br>
+            {{produto._controlado}} <br> {{produto._codGrupo}}
+        </p>
+            <a href="#" class="btn btn-dark">Comprar</a>
+        </div>
+    </div>
 </div>
