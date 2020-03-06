@@ -7,9 +7,11 @@ import { ContatoComponent } from './components/contato/contato.component';
 
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", redirectTo:"/home", pathMatch:"full"},
+  { path: "home", component: HomeComponent },
   { path:"sobre" , component: SobreComponent },
-  { path: "contato" , component: ContatoComponent }
+  { path: "contato" , component: ContatoComponent },
+  { path: '**', redirectTo:"/home", pathMatch:"full" }
 ];
 
 @NgModule({

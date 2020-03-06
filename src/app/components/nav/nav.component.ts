@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
     {
     ativo: true,
     label: "home",
-    route: "/"},
+    route: "/home"},
 {
     ativo: false,
     label: "sobre",

@@ -1,7 +1,7 @@
 <nav>
     <ul class="nav nav-tabs nav-fill bg-dark p-3">
-        <li class="nav-item" [ngClass]="{'active': item.ativo}" *ngFor="let item of itens">
-            <a href="#" (click)="destacar(item)" routerLink="{{item.route}}">{{item.label}}</a>
+        <li class="nav-item" routerLinkActive="active" *ngFor="let item of itens">
+            <a routerLink="{{item.route}}">{{item.label}}</a>
         </li>
     </ul>
 </nav>
