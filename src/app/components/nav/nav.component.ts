@@ -28,7 +28,12 @@ export class NavComponent implements OnInit {
     ativo: false,
     label: "contato",
     route: "/contato"
-    }]
+    },
+  {
+    ativo: false,
+    label: "cadastrarProduto",
+    route:"/cadastrar"
+  }]
   @Output() ativarItem = new EventEmitter();
   constructor() {}
 

@@ -13,6 +13,8 @@ import { ListaDeProdutosComponent } from './components/lista-de-produtos/lista-d
 import { GruposComponent } from './components/grupos/grupos.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ProdutoComponent } from './components/produto/produto.component';
+import { CadastrarProdutoComponent } from './components/cadastrar-produto/cadastrar-produto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { ProdutoComponent } from './components/produto/produto.component';
     ListaDeProdutosComponent,
     GruposComponent,
     ProdutoComponent,
-    MyFilterPipe
+    MyFilterPipe,
+    CadastrarProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

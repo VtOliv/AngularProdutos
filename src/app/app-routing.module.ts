@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { ContatoComponent } from './components/contato/contato.component';
+import { CadastrarProdutoComponent } from './components/cadastrar-produto/cadastrar-produto.component';
 
 
 
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path:"sobre" , component: SobreComponent },
   { path: "contato" , component: ContatoComponent },
+  { path:"cadastrar" , component: CadastrarProdutoComponent},
   { path: '**', redirectTo:"/home", pathMatch:"full" }
 ];
 

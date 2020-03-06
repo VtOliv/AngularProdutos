@@ -1,10 +1,10 @@
 export class Produto {
     constructor(
-        public _codProd:number, 
-        public _desc:string,
-        public _regAnvisa:string,
-        public _controlado:boolean,
-        public _codGrupo: number) {}
+        public _codProd?:number, 
+        public _desc?:string,
+        public _regAnvisa?:string,
+        public _controlado?:boolean,
+        public _codGrupo?: number) {}
 
         public get cod(): number {
             return this._codProd;
